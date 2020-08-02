@@ -1,8 +1,8 @@
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
 def sum_nodes(n1, n2, tens_digit = 0):
     val1 = 0 if n1 == None else n1.val
@@ -34,25 +34,3 @@ class Solution:
             s1.next = ListNode(tens_digit)
 
         return s1_start
-
-ln1 = ListNode(2)
-ln2 = ListNode(4)
-ln3 = ListNode(3)
-
-ln1.next = ln2
-ln2.next = ln3
-
-ln4 = ListNode(5)
-ln5 = ListNode(6)
-ln6 = ListNode(4)
-
-ln4.next = ln5
-ln5.next = ln6
-
-s = Solution()
-s1 = s.addTwoNumbers(ln1, ln4)
-
-while s1.next != None:
-    print(s1.val)
-    s1 = s1.next
-print(s1.val)
